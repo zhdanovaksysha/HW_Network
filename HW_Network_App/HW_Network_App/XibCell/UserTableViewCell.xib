@@ -34,10 +34,11 @@
                 </subviews>
                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="ttn-qh-oOJ" firstAttribute="top" secondItem="nKW-wI-y5D" secondAttribute="bottom" constant="85.5" id="0b2-63-x8S"/>
                     <constraint firstAttribute="bottom" secondItem="ttn-qh-oOJ" secondAttribute="bottom" constant="10" id="2LK-pJ-HBQ"/>
                     <constraint firstItem="nKW-wI-y5D" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="OOc-eT-8GO"/>
-                    <constraint firstItem="ttn-qh-oOJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Xvi-WT-w0G"/>
                     <constraint firstItem="nKW-wI-y5D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="y5M-TO-h1q"/>
+                    <constraint firstItem="ttn-qh-oOJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ymy-iL-3qt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
