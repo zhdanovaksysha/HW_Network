@@ -18,6 +18,7 @@
 		5E2F8D7522EA479700D7A021 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2F8D7422EA479700D7A021 /* Comment.swift */; };
 		5E2F8D7C22EA4F0200D7A021 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2F8D7A22EA4F0200D7A021 /* UserTableViewCell.swift */; };
 		5E2F8D7D22EA4F0200D7A021 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2F8D7B22EA4F0200D7A021 /* UserTableViewCell.xib */; };
+		5E947C0622EA557F0029FC59 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E947C0522EA557F0029FC59 /* UsersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5E2F8D7422EA479700D7A021 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		5E2F8D7A22EA4F0200D7A021 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		5E2F8D7B22EA4F0200D7A021 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		5E947C0522EA557F0029FC59 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		5E2F8D7822EA4ACD00D7A021 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E947C0522EA557F0029FC59 /* UsersViewController.swift */,
 				5E2F8D5E22EA461300D7A021 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -199,6 +202,7 @@
 				5E2F8D7C22EA4F0200D7A021 /* UserTableViewCell.swift in Sources */,
 				5E2F8D6F22EA470D00D7A021 /* NetworkManager.swift in Sources */,
 				5E2F8D5F22EA461300D7A021 /* ViewController.swift in Sources */,
+				5E947C0622EA557F0029FC59 /* UsersViewController.swift in Sources */,
 				5E2F8D5D22EA461300D7A021 /* AppDelegate.swift in Sources */,
 				5E2F8D7322EA476F00D7A021 /* Post.swift in Sources */,
 			);

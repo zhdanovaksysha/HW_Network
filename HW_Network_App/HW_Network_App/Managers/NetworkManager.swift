@@ -23,7 +23,7 @@ class NetworkManager {
         case comments
     }
     
-    private let baseUrl = "http://jsonplaceholder.typicode.com/"
+    private let baseUrl = "https://jsonplaceholder.typicode.com/"
     
     func getPosts(_ complitionHandler: @escaping ([Post]) -> Void) {
         
@@ -74,7 +74,7 @@ class NetworkManager {
     func getUsers(_ complitionHandler: @escaping ([User]) -> Void) {
         
         if let url = URL(string: baseUrl + API.users.rawValue) {
-            
+            print(url)
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 
                 if error != nil {
