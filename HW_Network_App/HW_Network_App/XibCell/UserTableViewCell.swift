@@ -13,7 +13,11 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+    var userId = 0
+    
     func configure(_ user: User) {
+        userId = user.id
+        
         nameLabel.text = user.name
         phoneLabel.text = user.phone
     }

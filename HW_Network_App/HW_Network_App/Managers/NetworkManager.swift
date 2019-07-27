@@ -73,24 +73,48 @@ class NetworkManager {
     
     func getUsers(_ complitionHandler: @escaping ([User]) -> Void) {
         
-        if let url = URL(string: baseUrl + API.users.rawValue) {
-            print(url)
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
+        guard let url = URL(string: baseUrl + API.users.rawValue) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if error != nil {
+                print("error")
+            }
+            else {
+                if let resp = response as? HTTPURLResponse,
+                    resp.statusCode == 200,
+                    let respData = data {
+                    
+                    let users = try? JSONDecoder().decode([User].self, from: respData)
+                    
+                    complitionHandler(users ?? [])
+                }
+            }
+            }.resume()
+    }
+    
+    func getPostsByUserId(userId: Int, _ complitionHandler: @escaping ([Post]) -> Void) {
+        
+        guard let url = URL(string: baseUrl + API.posts.rawValue) else { return }
+        
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        components?.queryItems = [URLQueryItem(name: "userId", value: "\(userId)")]
+        
+        guard let queryURL = components?.url else { return }
+        
+        URLSession.shared.dataTask(with: queryURL) { (data, response, error) in
+            
+            if error != nil {
+                print(error.debugDescription)
+            } else if let resp = response as? HTTPURLResponse,
+                resp.statusCode == 200,
+                let respData = data{
                 
-                if error != nil {
-                    print("error")
-                }
-                else {
-                    if let resp = response as? HTTPURLResponse,
-                        resp.statusCode == 200,
-                        let respData = data {
-                        
-                        let users = try? JSONDecoder().decode([User].self, from: respData)
-                        
-                        complitionHandler(users ?? [])
-                    }
-                }
-                }.resume()
-        }
+                let posts = try? JSONDecoder().decode([Post].self, from: respData)
+                
+                complitionHandler(posts ?? [])
+                
+            }
+        }.resume()
     }
 }
