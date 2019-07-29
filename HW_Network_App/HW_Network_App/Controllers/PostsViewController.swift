@@ -56,5 +56,18 @@ extension PostsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        let cell = tableView.cellForRow(at: indexPath) as! PostTableViewCell
+        
+        networkManager.getCommentsByPostId(cell.postId) { [weak self] (commentsByPostId) in
+            DispatchQueue.main.async {
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "CommentsVCId") as! CommentsViewController
+                
+                vc.comments = commentsByPostId
+                
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 }

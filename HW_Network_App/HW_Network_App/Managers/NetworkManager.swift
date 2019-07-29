@@ -117,4 +117,27 @@ class NetworkManager {
             }
         }.resume()
     }
+    
+    func getCommentsByPostId(_ postId: Int, _ complitionHandler: @escaping ([Comment]) -> Void) {
+        
+        guard let url = URL(string: baseUrl + API.comments.rawValue) else { return }
+        
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        components?.queryItems = [URLQueryItem(name: "postId", value: "\(postId)")]
+        
+         guard let queryURL = components?.url else { return }
+        
+        URLSession.shared.dataTask(with: queryURL) { (data, response, error) in
+            if error != nil {
+                print(error.debugDescription)
+            } else if let resp = response as? HTTPURLResponse,
+            resp.statusCode == 200,
+                let respData = data {
+                
+                let comments = try? JSONDecoder().decode([Comment].self, from: respData)
+                
+                complitionHandler(comments ?? [])
+            }
+        }.resume()
+    }
 }

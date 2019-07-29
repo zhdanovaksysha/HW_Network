@@ -91,17 +91,18 @@
             </objects>
             <point key="canvasLocation" x="1293" y="104"/>
         </scene>
-        <!--View Controller-->
+        <!--Comments View Controller-->
         <scene sceneID="pdk-eD-haF">
             <objects>
-                <viewController storyboardIdentifier="CommentsVCId" id="VzC-1s-QPp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentsVCId" id="VzC-1s-QPp" customClass="CommentsViewController" customModule="HW_Network_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="guD-rU-O1c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-lv-Mkf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-lv-Mkf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,6 +114,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DFY-IG-wd7"/>
                     </view>
+                    <connections>
+                        <outlet property="commentsTableView" destination="3NG-lv-Mkf" id="aY0-Lr-CcU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTl-kI-TzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

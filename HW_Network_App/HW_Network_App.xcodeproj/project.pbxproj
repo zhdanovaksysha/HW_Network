@@ -22,6 +22,9 @@
 		5EF8EDC822EC496E009126D6 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF8EDC722EC496E009126D6 /* PostsViewController.swift */; };
 		5EF8EDCB22EC4F93009126D6 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF8EDC922EC4F93009126D6 /* PostTableViewCell.swift */; };
 		5EF8EDCC22EC4F93009126D6 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF8EDCA22EC4F93009126D6 /* PostTableViewCell.xib */; };
+		5EF8EDCE22EE8626009126D6 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF8EDCD22EE8626009126D6 /* CommentsViewController.swift */; };
+		5EF8EDD122EE882B009126D6 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF8EDCF22EE882B009126D6 /* CommentTableViewCell.swift */; };
+		5EF8EDD222EE882B009126D6 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF8EDD022EE882B009126D6 /* CommentTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		5EF8EDC722EC496E009126D6 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		5EF8EDC922EC4F93009126D6 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		5EF8EDCA22EC4F93009126D6 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		5EF8EDCD22EE8626009126D6 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		5EF8EDCF22EE882B009126D6 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		5EF8EDD022EE882B009126D6 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				5E947C0522EA557F0029FC59 /* UsersViewController.swift */,
 				5E2F8D5E22EA461300D7A021 /* ViewController.swift */,
 				5EF8EDC722EC496E009126D6 /* PostsViewController.swift */,
+				5EF8EDCD22EE8626009126D6 /* CommentsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +137,8 @@
 				5E2F8D7B22EA4F0200D7A021 /* UserTableViewCell.xib */,
 				5EF8EDC922EC4F93009126D6 /* PostTableViewCell.swift */,
 				5EF8EDCA22EC4F93009126D6 /* PostTableViewCell.xib */,
+				5EF8EDCF22EE882B009126D6 /* CommentTableViewCell.swift */,
+				5EF8EDD022EE882B009126D6 /* CommentTableViewCell.xib */,
 			);
 			path = XibCell;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E2F8D7D22EA4F0200D7A021 /* UserTableViewCell.xib in Resources */,
+				5EF8EDD222EE882B009126D6 /* CommentTableViewCell.xib in Resources */,
 				5EF8EDCC22EC4F93009126D6 /* PostTableViewCell.xib in Resources */,
 				5E2F8D6722EA461400D7A021 /* LaunchScreen.storyboard in Resources */,
 				5E2F8D6422EA461400D7A021 /* Assets.xcassets in Resources */,
@@ -209,10 +219,12 @@
 			files = (
 				5E2F8D7122EA473400D7A021 /* User.swift in Sources */,
 				5E2F8D7522EA479700D7A021 /* Comment.swift in Sources */,
+				5EF8EDCE22EE8626009126D6 /* CommentsViewController.swift in Sources */,
 				5E2F8D7C22EA4F0200D7A021 /* UserTableViewCell.swift in Sources */,
 				5EF8EDC822EC496E009126D6 /* PostsViewController.swift in Sources */,
 				5E2F8D6F22EA470D00D7A021 /* NetworkManager.swift in Sources */,
 				5E2F8D5F22EA461300D7A021 /* ViewController.swift in Sources */,
+				5EF8EDD122EE882B009126D6 /* CommentTableViewCell.swift in Sources */,
 				5E947C0622EA557F0029FC59 /* UsersViewController.swift in Sources */,
 				5EF8EDCB22EC4F93009126D6 /* PostTableViewCell.swift in Sources */,
 				5E2F8D5D22EA461300D7A021 /* AppDelegate.swift in Sources */,

@@ -55,7 +55,7 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) as! UserTableViewCell
-        print("cell.userId \(cell.userId)")
+        
         networkManager.getPostsByUserId(userId: cell.userId) {[weak self] (postsByUserId) in
             DispatchQueue.main.async {
 
