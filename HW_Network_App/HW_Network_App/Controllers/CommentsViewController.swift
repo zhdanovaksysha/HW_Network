@@ -53,6 +53,4 @@ extension CommentsViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
 }

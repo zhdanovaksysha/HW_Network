@@ -56,6 +56,8 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.cellForRow(at: indexPath) as! UserTableViewCell
         
+        cell.setSelected(false, animated: true)
+        
         networkManager.getPostsByUserId(userId: cell.userId) {[weak self] (postsByUserId) in
             DispatchQueue.main.async {
 

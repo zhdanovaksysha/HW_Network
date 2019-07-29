@@ -58,6 +58,8 @@ extension PostsViewController: UITableViewDelegate, UITableViewDataSource {
 
         let cell = tableView.cellForRow(at: indexPath) as! PostTableViewCell
         
+        cell.setSelected(false, animated: true)
+        
         networkManager.getCommentsByPostId(cell.postId) { [weak self] (commentsByPostId) in
             DispatchQueue.main.async {
                 
