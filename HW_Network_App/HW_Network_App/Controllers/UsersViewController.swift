@@ -26,8 +26,6 @@ class UsersViewController: UIViewController {
         }
     }
     
-    var postsByUserId: [Post] = []
-    
     var networkManager = NetworkManager()
     
     override func viewDidLoad() {
@@ -55,11 +53,18 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCellID", for: indexPath) as! UserTableViewCell
         
         networkManager.getPostsByUserId(userId: cell.userId) {[weak self] (postsByUserId) in
             DispatchQueue.main.async {
-                self?.postsByUserId = postsByUserId
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "PostsVCId") as! PostsViewController
+                
+                vc.posts = postsByUserId
+                
+                self?.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
