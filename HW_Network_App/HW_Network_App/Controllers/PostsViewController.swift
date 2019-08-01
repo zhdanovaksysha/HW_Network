@@ -34,8 +34,14 @@ class PostsViewController: UIViewController {
     
     func setUpTableView() {
         
-        self.navigationItem.title = "Posts"
-        self.navigationItem.backBarButtonItem?.title = "Back To Posts"
+        let addedPostButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: Selector(("didAddedPost")))
+        self.navigationItem.rightBarButtonItem = addedPostButton
+    }
+    
+    @objc func didAddedPost () {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreatePostVCId")
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

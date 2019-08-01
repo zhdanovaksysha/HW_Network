@@ -26,6 +26,52 @@
             </objects>
             <point key="canvasLocation" x="-357" y="104"/>
         </scene>
+        <!--Create User-->
+        <scene sceneID="a0W-Zs-Wgz">
+            <objects>
+                <viewController storyboardIdentifier="CreateUserVCId" id="kpO-iJ-xOf" customClass="CreateUserViewController" customModule="HW_Network_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b1E-He-MOX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="h6k-hJ-zZf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create User" id="VX6-8i-EkG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUI-nM-0OL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="-555"/>
+        </scene>
+        <!--Create Post View Controller-->
+        <scene sceneID="fnR-lS-Nej">
+            <objects>
+                <viewController storyboardIdentifier="CreatePostVCId" id="x2Z-Wc-LGc" customClass="CreatePostViewController" customModule="HW_Network_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4eR-oC-9Ja" customClass="Create">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="E62-R7-qIT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3M-ja-95T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="-555"/>
+        </scene>
+        <!--Create Comment View Controller-->
+        <scene sceneID="KQg-g6-UoW">
+            <objects>
+                <viewController storyboardIdentifier="CreateCommentVCId" id="Y9Q-lZ-lPn" customClass="CreateCommentViewController" customModule="HW_Network_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GOz-Nn-vAH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Kew-nv-7g6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpf-ag-6wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2103" y="-555"/>
+        </scene>
         <!--Users-->
         <scene sceneID="ybQ-Eh-gSx">
             <objects>
@@ -51,6 +97,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="tyS-KV-2K0">
                         <barButtonItem key="backBarButtonItem" title="Back to Users" id="WNL-Wk-T1n"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="FrW-Pp-uYQ">
+                            <connections>
+                                <action selector="didCreatedUser:" destination="8be-fN-Kr7" id="zMe-B2-V9T"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="userTableView" destination="QpF-kr-yV1" id="ABG-Xl-Yfv"/>
@@ -60,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="472" y="104"/>
         </scene>
-        <!--Posts View Controller-->
+        <!--Posts-->
         <scene sceneID="8Jl-VK-GIn">
             <objects>
                 <viewController storyboardIdentifier="PostsVCId" id="RDu-GV-AXc" customClass="PostsViewController" customModule="HW_Network_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,6 +134,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rN0-Lp-oCD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Posts" id="tjZ-XC-7hL">
+                        <barButtonItem key="backBarButtonItem" title="Back to Posts" id="6h2-aR-fWR"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="postsTableView" destination="eaZ-5o-vu1" id="egw-c5-J0e"/>
                     </connections>
@@ -91,7 +145,7 @@
             </objects>
             <point key="canvasLocation" x="1293" y="104"/>
         </scene>
-        <!--Comments View Controller-->
+        <!--Comments-->
         <scene sceneID="pdk-eD-haF">
             <objects>
                 <viewController storyboardIdentifier="CommentsVCId" id="VzC-1s-QPp" customClass="CommentsViewController" customModule="HW_Network_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +153,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-lv-Mkf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-lv-Mkf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,13 +168,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DFY-IG-wd7"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Comments" id="8ve-VL-Iuz"/>
                     <connections>
                         <outlet property="commentsTableView" destination="3NG-lv-Mkf" id="aY0-Lr-CcU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTl-kI-TzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2175" y="104"/>
+            <point key="canvasLocation" x="2104" y="104"/>
         </scene>
     </scenes>
 </document>

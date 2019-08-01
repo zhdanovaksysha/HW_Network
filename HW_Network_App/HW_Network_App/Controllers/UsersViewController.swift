@@ -37,7 +37,13 @@ class UsersViewController: UIViewController {
             }
         }
     }
-
+    
+    @IBAction func didCreatedUser(_ sender: Any) {
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateUserVCId") as! CreateUserViewController
+        
+        self.present(vc, animated: true, completion: nil)
+    }
 }
 
 extension UsersViewController: UITableViewDelegate, UITableViewDataSource {

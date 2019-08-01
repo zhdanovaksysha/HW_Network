@@ -34,8 +34,14 @@ class CommentsViewController: UIViewController {
     
     func setUpTableView() {
         
-        self.navigationItem.title = "Comments"
-        self.navigationItem.backBarButtonItem?.title = "Back To Comments"
+        let addedCommentButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: Selector(("didAddedComment")))
+        self.navigationItem.rightBarButtonItem = addedCommentButton
+    }
+    
+    @objc func didAddedComment() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateCommentVCId")
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
